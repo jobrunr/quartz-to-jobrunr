@@ -39,7 +39,6 @@ public class QuartzExampleRecurringJob {
             // define the job and tie it to our HelloJob class
             JobDetail jobDetail = newJob(HelloJob.class)
                     .withIdentity(jobKey)
-                    .storeDurably() // otherwise it cannot be triggered immediately
                     .build();
 
             // create the JobDataMap
